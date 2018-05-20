@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Turbo9 Search</string>
+    <string name="button_wildcard">*</string>
 </resources>

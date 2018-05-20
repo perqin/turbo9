@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <TextView
+        android:id="@+id/queryTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/progressBar"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/num1Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num1Button"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@id/num2Button"
+        app:layout_constraintBottom_toTopOf="@id/num4Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num2Button"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@id/num3Button"
+        app:layout_constraintBottom_toTopOf="@id/num5Button"
+        app:layout_constraintStart_toEndOf="@id/num1Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num3Button"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/num6Button"
+        app:layout_constraintStart_toEndOf="@id/num2Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num4Button"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@id/num5Button"
+        app:layout_constraintBottom_toTopOf="@id/num7Button"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num5Button"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@id/num6Button"
+        app:layout_constraintBottom_toTopOf="@id/num8Button"
+        app:layout_constraintStart_toEndOf="@id/num4Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num6Button"
+        android:text="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/num9Button"
+        app:layout_constraintStart_toEndOf="@id/num5Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num7Button"
+        android:text="7"
+        app:layout_constraintEnd_toStartOf="@id/num8Button"
+        app:layout_constraintBottom_toTopOf="@id/wildcardButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num8Button"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@id/num9Button"
+        app:layout_constraintBottom_toTopOf="@id/num0Button"
+        app:layout_constraintStart_toEndOf="@id/num7Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num9Button"
+        android:text="9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/backspaceButton"
+        app:layout_constraintStart_toEndOf="@id/num8Button" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/wildcardButton"
+        android:text="@string/button_wildcard"
+        app:layout_constraintEnd_toStartOf="@id/num0Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/num0Button"
+        android:text="0"
+        app:layout_constraintEnd_toStartOf="@id/backspaceButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/wildcardButton" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.T9Button"
+        android:id="@+id/backspaceButton"
+        android:text="del"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/num0Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
